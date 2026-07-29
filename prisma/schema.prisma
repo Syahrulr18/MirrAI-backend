@@ -1,0 +1,132 @@
+// prisma/schema.prisma
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// ─── User ───────────────────────────────────────────────────
+model User {
+  id                String    @id @default(uuid())
+  email             String    @unique
+  displayName       String?
+  preferredLanguage String    @default("en")
+  createdAt         DateTime  @default(now())
+
+  sessions     PracticeSession[]
+  streak       UserStreak?
+  badges       UserBadge[]
+  chatMessages ChatMessage[]
+}
+
+// ─── Practice Session ───────────────────────────────────────
+model PracticeSession {
+  id             String       @id @default(uuid())
+  userId         String
+  user           User         @relation(fields: [userId], references: [id])
+  mode           PracticeMode
+  durationTarget Int
+  durationActual Int
+  videoUrl       String?
+  createdAt      DateTime     @default(now())
+
+  // Raw aggregated metrics from frontend
+  eyeContactGoodSec   Int
+  eyeContactBadSec    Int
+  fillerWordCount     Int
+  fillerWordTimestamps Json   // array of { word: string, atSecond: number }
+  avgWpm              Float
+  wpmSamples          Json   // array of { atSecond: number, wpm: number }
+  postureFlags        Json   // array of { type: "slouch"|"fidget"|"passive_hands", atSecond: number }
+
+  scorecard Scorecard?
+
+  @@index([userId, createdAt])
+}
+
+enum PracticeMode {
+  THESIS_DEFENSE
+  JOB_INTERVIEW_PITCH
+  PUBLIC_SPEECH
+}
+
+// ─── Scorecard ──────────────────────────────────────────────
+model Scorecard {
+  id                String          @id @default(uuid())
+  sessionId         String          @unique
+  session           PracticeSession @relation(fields: [sessionId], references: [id])
+  totalScore        Int
+  bodyLanguageScore Int
+  voiceFluencyScore Int
+  scriptAccuracy    Int?
+  createdAt         DateTime        @default(now())
+}
+
+// ─── Streak ─────────────────────────────────────────────────
+model UserStreak {
+  id              String    @id @default(uuid())
+  userId          String    @unique
+  user            User      @relation(fields: [userId], references: [id])
+  currentStreak   Int       @default(0)
+  longestStreak   Int       @default(0)
+  lastPracticedAt DateTime?
+}
+
+// ─── Badges / Achievements ─────────────────────────────────
+model Badge {
+  id          String      @id @default(uuid())
+  code        String      @unique
+  name        String
+  description String
+  iconKey     String
+  users       UserBadge[]
+}
+
+model UserBadge {
+  id         String   @id @default(uuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
+  badgeId    String
+  badge      Badge    @relation(fields: [badgeId], references: [id])
+  unlockedAt DateTime @default(now())
+
+  @@unique([userId, badgeId])
+}
+
+// ─── Script Templates ──────────────────────────────────────
+model ScriptTemplate {
+  id       String @id @default(uuid())
+  title    String
+  category String
+  content  String @db.Text
+  language String @default("en")
+}
+
+// ─── Learning Articles ─────────────────────────────────────
+model LearningArticle {
+  id         String  @id @default(uuid())
+  title      String
+  topic      String
+  contentUrl String?
+  body       String? @db.Text
+  language   String  @default("en")
+}
+
+// ─── Chat Messages (AI Coach) ──────────────────────────────
+model ChatMessage {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  role      ChatRole
+  content   String   @db.Text
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+enum ChatRole {
+  USER
+  MODEL
+}
