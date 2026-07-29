@@ -621,6 +621,271 @@ Fillers often appear at transitions. Instead of "So, um, moving on..." prepare s
 ### 5. Practice with MirrAI
 Use the real-time filler word counter during practice sessions. Seeing the count increase in real-time creates powerful awareness.`,
   },
+  {
+    title: "How to Close a Presentation",
+    topic: "closing",
+    language: "en",
+    body: `## How to Close a Presentation
+
+### Why Closings Matter
+Audiences remember beginnings and endings far more than the middle of a talk — a phenomenon psychologists call the **serial position effect**. A weak closing can undo an otherwise strong presentation, while a strong one cements your message long after you've left the stage.
+
+### The Four Elements of a Strong Closing
+
+**1. Signal the End**
+- Use verbal cues like "As I wrap up..." or "Let me leave you with this..."
+- Slow your pace slightly to signal importance
+- Avoid abrupt stops that leave the audience unsure if you're finished
+
+**2. Summarize — Don't Introduce**
+- Restate your 2-3 key points briefly
+- Never introduce new information in the closing
+- Keep it short — a summary should take seconds, not minutes
+
+**3. End with Impact**
+- **Callback** — return to your opening story or quote to create a sense of closure
+- **Call to action** — tell the audience exactly what to do next
+- **Rhetorical question** — leave them thinking after you've stopped talking
+
+**4. Land the Last Line**
+- Prepare and memorize your final sentence word-for-word
+- End on a strong statement, not a trailing thought
+- Pause after your last word before stepping back or sitting down
+
+### Common Mistakes
+
+| Mistake | Fix |
+|---|---|
+| Ending with "That's it" or "I guess that's all" | Prepare a deliberate final line in advance |
+| Apologizing for time or content ("Sorry, I'm out of time") | Practice pacing so you finish on schedule |
+| Introducing new ideas at the very end | Save new points for the body, not the close |
+| Trailing off while gathering notes | Finish speaking, pause, then move |
+
+### Quick Exercise
+Write your closing line word-for-word and memorize it. Practice saying it out loud 5 times with a full pause afterward. Notice how the silence after a strong line makes it land harder.`
+  },
+  {
+    title: "Vocal Variety for Confident Speaking",
+    topic: "vocal_variety",
+    language: "en",
+    body: `## Vocal Variety for Confident Speaking
+
+### Why Vocal Variety Matters
+A monotone voice is one of the fastest ways to lose an audience, regardless of how strong the content is. Vocal variety keeps listeners engaged and signals confidence, emotion, and emphasis.
+
+### The Four Dimensions of Voice
+
+**1. Pitch — Rise and Fall**
+- Raise pitch slightly for questions or excitement
+- Lower pitch for serious or authoritative points
+- Avoid staying flat across an entire sentence
+
+**2. Pace — Speed Control**
+- Slow down on key points so they sink in
+- Speed up slightly during stories to build energy
+- Insert brief pauses before important statements
+
+**3. Volume — Dynamic Range**
+- Lower your volume to draw the audience in during a key moment
+- Raise volume for emphasis or excitement
+- Avoid speaking at one constant volume throughout
+
+**4. Pauses — The Power of Silence**
+- Pause after asking a rhetorical question
+- Pause before revealing an important point
+- Avoid filling every silence with "um" or "so"
+
+### Common Mistakes
+
+| Mistake | Fix |
+|---|---|
+| Speaking in a flat, unchanging tone | Practice reading a passage with exaggerated emotion |
+| Rushing through the entire talk | Mark pause points directly in your notes |
+| Trailing off at the end of sentences | Keep volume steady through the full sentence |
+| Fear of silence | Practice counting "one-two" silently during pauses |
+
+### Quick Exercise
+Record yourself reading the same paragraph twice: once in a flat monotone, once using pitch, pace, and pauses deliberately. Compare the two recordings — notice how much more engaging the second version sounds.`
+  },
+  {
+    title: "Eye Contact and Audience Connection",
+    topic: "eye_contact",
+    language: "en",
+    body: `## Eye Contact and Audience Connection
+
+### Why Eye Contact Matters
+Eye contact builds trust, signals confidence, and makes each audience member feel personally addressed rather than lectured at.
+
+### The Core Techniques
+
+**1. The Lighthouse Method**
+- Sweep your gaze evenly across the whole room
+- Don't favor one side or only the front rows
+- Move like a lighthouse beam — steady and continuous, not darting
+
+**2. Hold, Don't Dart**
+- Hold eye contact with one person for 3-5 seconds before moving on
+- Complete a full thought while looking at one person
+- Avoid scanning too quickly — it reads as nervousness
+
+**3. Zone Coverage for Large Rooms**
+- Divide the room into left, center, and right zones
+- Pick one representative point in each zone to look at
+- Rotate through zones evenly over the course of your talk
+
+**4. Virtual Presentations**
+- Look directly into the camera lens, not at faces on screen
+- Position your camera at eye level
+- Occasionally glance at the gallery to read reactions, then return to the lens
+
+### Common Mistakes
+
+| Mistake | Fix |
+|---|---|
+| Staring at notes or slides | Use brief glances, memorize key transitions |
+| Looking only at one friendly face | Consciously rotate across all zones |
+| Rapid scanning across the room | Slow down, hold each point for a few seconds |
+| Looking at the screen instead of the camera (virtual) | Tape a small arrow near the lens as a reminder |
+
+### Quick Exercise
+Practice your opening 30 seconds in front of a small group or on video. Have them note whether you looked at each zone of the room evenly. Adjust and repeat until the coverage feels balanced.`
+  },
+  {
+    title: "Handling Q&A Sessions",
+    topic: "qna",
+    language: "en",
+    body: `## Handling Q&A Sessions
+
+### Why Q&A Matters
+The question-and-answer session is unscripted, which makes it feel risky — but it's also where speakers build the most credibility by thinking on their feet.
+
+### The Four-Step Q&A Framework
+
+**1. Listen Fully**
+- Let the person finish their question completely
+- Don't interrupt, even if you think you know where it's going
+- Take a breath before responding to avoid rushing
+
+**2. Repeat or Paraphrase**
+- Repeat the question so the whole room hears it
+- Paraphrasing also buys you a few seconds to think
+- Confirm you understood correctly before answering
+
+**3. Answer with Structure**
+- Lead with your main point, then explain
+- Keep answers concise — avoid rambling
+- If the question has multiple parts, address them one at a time
+
+**4. Handle Difficult Questions Gracefully**
+- Acknowledge the questioner's perspective before responding
+- If you don't know the answer, say so honestly and offer to follow up
+- Redirect aggressive or off-topic questions politely back to the topic
+
+### Common Mistakes
+
+| Mistake | Fix |
+|---|---|
+| Making up an answer when unsure | Say "I don't know, but I'll find out" |
+| Getting defensive with critical questions | Acknowledge the point calmly before responding |
+| Letting one person dominate the session | Politely note time limits and move to others |
+| No time limit set in advance | Announce Q&A duration at the start |
+
+### Quick Exercise
+Have a colleague ask you 5 unexpected questions about your topic. Practice pausing, paraphrasing, and answering concisely before moving to the next question.`
+  },
+  {
+    title: "Storytelling in Presentations",
+    topic: "storytelling",
+    language: "en",
+    body: `## Storytelling in Presentations
+
+### Why Storytelling Matters
+Stories are remembered far longer than facts and figures alone. They create emotional connection and make abstract ideas concrete and memorable.
+
+### The Story Structure
+
+**1. Setup**
+- Introduce a relatable character (often yourself or someone the audience can identify with)
+- Establish the setting and context quickly
+- Keep this part brief — get to the conflict fast
+
+**2. Conflict**
+- Introduce the challenge, obstacle, or tension
+- Make the stakes clear — what happens if it isn't resolved?
+- This is the part that hooks audience attention
+
+**3. Resolution**
+- Show how the conflict was resolved
+- Connect the resolution directly to your main message
+- Let the takeaway feel earned, not stated outright
+
+### Techniques for Stronger Stories
+- Use specific, concrete details (names, places, exact moments) instead of vague generalities
+- Personal stories create stronger connection than hypothetical examples
+- Keep stories short — 1-2 minutes is usually enough for a presentation
+- Practice a small set of 2-3 reusable stories that fit different contexts
+
+### Common Mistakes
+
+| Mistake | Fix |
+|---|---|
+| Story too long or detailed | Trim to only the details that serve the point |
+| No clear connection to the message | Explicitly link the resolution to your takeaway |
+| Overly generic examples | Use specific names, numbers, and moments |
+| Punchline buried or rushed | Slow down and pause before the key moment |
+
+### Quick Exercise
+Write down one personal story in three sentences: setup, conflict, resolution. Practice telling it aloud in under 90 seconds, then connect it explicitly to a message you want your audience to remember.`
+  },
+  {
+    title: "Effective Slide Design",
+    topic: "slide_design",
+    language: "en",
+    body: `## Effective Slide Design
+
+### Why Slide Design Matters
+Slides should support the speaker, not replace them. Cluttered or text-heavy slides pull attention away from the speaker and turn a presentation into a reading exercise.
+
+### The Core Principles
+
+**1. The 6x6 Rule**
+- No more than 6 lines per slide
+- No more than 6 words per line
+- Use this as a guideline to prevent slide clutter, not a rigid law
+
+**2. One Idea Per Slide**
+- Each slide should communicate a single concept
+- Split complex ideas across multiple slides rather than cramming them together
+- This also makes it easier for you to control pacing
+
+**3. Visuals Over Text**
+- Replace long paragraphs with images, icons, or charts
+- Use data visualizations instead of raw number tables when possible
+- A strong image can replace an entire paragraph of explanation
+
+**4. Contrast and Readability**
+- Ensure strong contrast between text and background
+- Choose fonts that are legible from the back of the room
+- Avoid small font sizes — bigger is almost always safer
+
+**5. Consistency**
+- Use the same template, color palette, and font across all slides
+- Consistent design signals professionalism and reduces visual distraction
+- Align elements (titles, images, logos) in the same position slide to slide
+
+### Common Mistakes
+
+| Mistake | Fix |
+|---|---|
+| Slides packed with full sentences | Apply the 6x6 rule, move detail to speaker notes |
+| Reading directly off the slide | Use slides as visual cues, not a script |
+| Inconsistent fonts/colors across slides | Build from a single template |
+| Low contrast text (e.g., light gray on white) | Test slides projected on a screen before presenting |
+
+### Quick Exercise
+Take one text-heavy slide you've used before and redesign it using only one image or icon and a short headline. Compare how much faster the redesigned version communicates the idea.`
+  },
+
 
   // Bahasa Indonesia
   {

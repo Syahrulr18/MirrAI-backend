@@ -58,11 +58,13 @@ analyticsRouter.get("/consistency", async (req, res, next) => {
       select: { createdAt: true }
     });
 
-    // Generate all days of the current month
+    // Generate all days of the current month (1 to daysInMonth)
     const consistencyData = [];
     for (let day = 1; day <= daysInMonth; day++) {
-      const d = new Date(year, month, day);
-      const dateStr = d.toISOString().split('T')[0];
+      const yearStr = String(year);
+      const monthStr = String(month + 1).padStart(2, '0');
+      const dayStr = String(day).padStart(2, '0');
+      const dateStr = `${yearStr}-${monthStr}-${dayStr}`;
       consistencyData.push({
         date: dateStr,
         practiced: false
@@ -70,7 +72,11 @@ analyticsRouter.get("/consistency", async (req, res, next) => {
     }
 
     sessions.forEach(session => {
-      const dateStr = session.createdAt.toISOString().split('T')[0];
+      const sDate = session.createdAt;
+      const yearStr = String(sDate.getFullYear());
+      const monthStr = String(sDate.getMonth() + 1).padStart(2, '0');
+      const dayStr = String(sDate.getDate()).padStart(2, '0');
+      const dateStr = `${yearStr}-${monthStr}-${dayStr}`;
       const found = consistencyData.find(d => d.date === dateStr);
       if (found) {
         found.practiced = true;
