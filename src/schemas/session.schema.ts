@@ -26,6 +26,7 @@ export const createSessionSchema = z.object({
       atSecond: z.number().nonnegative(),
     })
   ),
+  scriptAccuracy: z.number().int().min(0).max(100).optional(),
 });
 
 export type CreateSessionInput = z.infer<typeof createSessionSchema>;

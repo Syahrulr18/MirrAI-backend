@@ -12,7 +12,7 @@ export function validate(schema: ZodSchema) {
           data: null,
           error: {
             message: "Validation error",
-            details: err.errors.map((e) => ({
+            details: err.issues.map((e: any) => ({
               field: e.path.join("."),
               message: e.message,
             })),

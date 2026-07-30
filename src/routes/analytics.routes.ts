@@ -59,7 +59,7 @@ analyticsRouter.get("/consistency", async (req, res, next) => {
     });
 
     // Generate all days of the current month (1 to daysInMonth)
-    const consistencyData = [];
+    const consistencyData: { date: string; practiced: boolean }[] = [];
     for (let day = 1; day <= daysInMonth; day++) {
       const yearStr = String(year);
       const monthStr = String(month + 1).padStart(2, '0');
