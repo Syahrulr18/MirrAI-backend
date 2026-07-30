@@ -37,58 +37,28 @@ analyticsRouter.get("/trends", async (req, res, next) => {
   }
 });
 
-// GET /api/analytics/consistency — Current month practice heatmap data
+// GET /api/analytics/consistency — Practice timestamps
 analyticsRouter.get("/consistency", async (req, res, next) => {
   try {
     const userId = req.user!.id;
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = now.getMonth(); // 0-indexed
-
-    const firstDay = new Date(year, month, 1);
-    firstDay.setHours(0, 0, 0, 0);
-    const lastDay = new Date(year, month + 1, 0); // last day of current month
-    const daysInMonth = lastDay.getDate();
+    // Get all sessions from the last 6 months
+    const sixMonthsAgo = new Date();
+    sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
 
     const sessions = await prisma.practiceSession.findMany({
       where: {
         userId,
         createdAt: {
-          gte: firstDay,
-          lte: new Date(year, month, daysInMonth, 23, 59, 59, 999)
+          gte: sixMonthsAgo
         }
       },
       select: { createdAt: true }
     });
 
-    // Generate all days of the current month (1 to daysInMonth)
-    const consistencyData: { date: string; practiced: boolean }[] = [];
-    for (let day = 1; day <= daysInMonth; day++) {
-      const yearStr = String(year);
-      const monthStr = String(month + 1).padStart(2, '0');
-      const dayStr = String(day).padStart(2, '0');
-      const dateStr = `${yearStr}-${monthStr}-${dayStr}`;
-      consistencyData.push({
-        date: dateStr,
-        practiced: false
-      });
-    }
-
-    sessions.forEach(session => {
-      const sDate = session.createdAt;
-      const yearStr = String(sDate.getFullYear());
-      const monthStr = String(sDate.getMonth() + 1).padStart(2, '0');
-      const dayStr = String(sDate.getDate()).padStart(2, '0');
-      const dateStr = `${yearStr}-${monthStr}-${dayStr}`;
-      const found = consistencyData.find(d => d.date === dateStr);
-      if (found) {
-        found.practiced = true;
-      }
-    });
+    const timestamps = sessions.map(s => s.createdAt.toISOString());
 
     res.json({
-      data: consistencyData,
-      meta: { year, month: month + 1, daysInMonth },
+      data: timestamps,
       error: null
     });
   } catch (err) {
