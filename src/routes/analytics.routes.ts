@@ -10,12 +10,15 @@ analyticsRouter.use(authMiddleware);
 analyticsRouter.get("/trends", async (req, res, next) => {
   try {
     const userId = req.user!.id;
-    // Get last 15 sessions, ordered by date ascending so oldest is first for chart
+    // Get last 15 sessions, newest first, then reverse so chart displays chronologically
     const sessions = await prisma.practiceSession.findMany({
       where: { userId },
-      orderBy: { createdAt: 'asc' },
+      orderBy: { createdAt: 'desc' },
       take: 15
     });
+
+    // Reverse so oldest is first for chart display
+    sessions.reverse();
 
     const data = sessions.map(session => {
       const totalEyeTime = session.eyeContactGoodSec + session.eyeContactBadSec;
